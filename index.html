@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Multimedia Hub - BCA Minor Project</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-photo-film"></i> MediaHub
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#player-section" class="nav-link active">Media Player</a></li>
+                <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
+                <li><a href="#animation-section" class="nav-link">Animation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Media Player Section -->
+        <section id="player-section" class="content-section">
+            <h2><i class="fa-solid fa-circle-play"></i> Custom Multimedia Player</h2>
+            <div class="player-container">
+                <!-- HTML5 Video Element -->
+                <video id="custom-video" poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+                <!-- Custom Controls -->
+                <div class="controls-bar">
+                    <button id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                    <input type="range" id="seek-bar" value="0" max="100">
+                    <button id="mute-btn"><i class="fa-solid fa-volume-high"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Image Gallery Section -->
+        <section id="gallery-section" class="content-section">
+            <h2><i class="fa-solid fa-images"></i> Interactive Image Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=400&q=80" alt="Art 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=400&q=80" alt="Art 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Art 3">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Canvas Animation Section -->
+        <section id="animation-section" class="content-section">
+            <h2><i class="fa-solid fa-wand-magic-sparkles"></i> HTML5 Canvas Animation</h2>
+            <div class="canvas-container">
+                <canvas id="myCanvas" width="600" height="300"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <footer>
+        <p>BCA Minor Project | Multimedia Hub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
